@@ -1,0 +1,30 @@
+def start():
+    print 'Welcome!'
+    people_dictionary = {'brett' : ['Male','Weight 175'],
+        'nancy' : ['Female','Weight 125'],
+        'patrick' : ['Male','Weight 195'],
+        'diane' : ['Female','Weight 115'],
+        'adam' : ['Male','Weight 215']}
+    name = raw_input('Please type in a name: ').lower()
+    print 'You typed in the name ' + name.capitalize()
+    try:
+        Persons_Data = people_dictionary[name]
+        print 'Name: ' + name.capitalize() 
+        print 'Sex: ' + Persons_Data[0]
+        print 'Weight: ' + Persons_Data[1]
+        more()
+    except:
+        print 'That name (as written) was not found in the dictionary.'
+        more()
+
+def more():
+    More = input('Would you like to search for another name?: ').lower()
+    if  More == 'no':
+        return
+    if More == 'yes':
+        start()
+    else:
+        print "Please enter Yes or No."
+        more()
+
+start()
