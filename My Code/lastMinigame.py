@@ -1,6 +1,6 @@
 import time
 
-print "Welcome to Word Scramble"
+print "Welcome to Word Memo"
 
 print "Player 1, Enter 10 words\n"
 
@@ -33,7 +33,7 @@ print wordlist
 time.sleep(10)
 
 print('\n' * 100)
-print raw_input("Player 2, Enter the Words\n")
+print raw_input("Player 2, Enter the Words:\n")
 
 count = 0
 while True:
